@@ -1,11 +1,5 @@
 package util;
 
-import Domain.User;
-import Domain.Auction;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
 public class Main {
     public static void main(String[] args) {
 
