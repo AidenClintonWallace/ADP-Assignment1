@@ -1,6 +1,11 @@
-package Domain;
+package za.ac.cput.Domain;
+
+/**
+ * @author Zahrah Vermaak 221406395
+ */
 
 public class User {
+
     private String userID;
     private String name;
     private String surname;
