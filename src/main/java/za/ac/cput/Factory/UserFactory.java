@@ -2,14 +2,31 @@ package za.ac.cput.Factory;
 
 import za.ac.cput.Domain.User;
 
-public class UserFactory {
-        public static User createUser(String id, String name, String surname, String email) {
-            return new User.Builder()
-                    .setUserId(id)
-                    .setName(name)
-                    .setSurname(surname)
-                    .setEmail(email)
-                    .build();
-        }
+import java.util.UUID;
 
+public class UserFactory {
+    public static User createUser(String name, String surname, String email, String password) {
+
+        if (name == null || name.isEmpty())
+            return null;
+
+        if (surname == null || surname.isEmpty())
+            return null;
+
+        if (email == null || email.isEmpty())
+            return null;
+
+        if (password == null || password.isEmpty())
+            return null;
+
+        String userId = UUID.randomUUID().toString();
+
+        return new User.Builder()
+                .setUserId(userId)
+                .setSurname(surname)
+                .setName(name)
+                .setEmail(email)
+                .setPassword(password)
+                .build();
+    }
 }

@@ -6,7 +6,7 @@ package za.ac.cput.Domain;
 
 public class User {
 
-    private String userID;
+    private String userId;
     private String name;
     private String surname;
     private String email;
@@ -16,16 +16,17 @@ public class User {
     }
 
     private User(Builder builder) {
-        this.userID = builder.userID;
+        this.userId = builder.userId;
         this.name = builder.name;
         this.surname = builder.surname;
         this.email = builder.email;
         this.password = builder.password;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getUserId() {
+        return userId;
     }
+
     public String getName(){
         return name;
     }
@@ -43,15 +44,17 @@ public class User {
         return "Name: " + name + " " + "Surname: " + surname;
     }
 
+
+
     public static class Builder {
-        private String userID;
+        private String userId;
         private String name;
         private String surname;
         private String email;
         private String password;
 
         public Builder setUserId(String userId) {
-            this.userID = userId;
+            this.userId = userId;
             return this;
         }
 
@@ -84,7 +87,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userID='" + userID + '\'' +
+                "userID='" + userId + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
