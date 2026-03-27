@@ -1,6 +1,7 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repositoryImpl;
 
 import za.ac.cput.Domain.Product;
+import za.ac.cput.Repository.IProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;
